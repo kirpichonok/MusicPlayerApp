@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		194977862B6A262B0033749D /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 194977852B6A262A0033749D /* Montserrat.ttf */; };
+		1949777D2B6A0B050033749D /* SongSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949777C2B6A0B050033749D /* SongSearchView.swift */; };
+		194977802B6A13BB0033749D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949777F2B6A13BB0033749D /* SearchBar.swift */; };
+		194977822B6A13EB0033749D /* TrackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977812B6A13EB0033749D /* TrackRow.swift */; };
+		194977842B6A1F5C0033749D /* TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977832B6A1F5C0033749D /* TrackList.swift */; };
+		194977892B6A2C350033749D /* String+FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977882B6A2C350033749D /* String+FontName.swift */; };
+		1949778D2B6A321E0033749D /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1949778C2B6A321E0033749D /* Montserrat-SemiBold.ttf */; };
+		194977932B6A46770033749D /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 194977922B6A46770033749D /* Montserrat-Medium.ttf */; };
+		194977952B6A48460033749D /* Image+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977942B6A48460033749D /* Image+init.swift */; };
+		194977972B6A4BFD0033749D /* String+SystemImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977962B6A4BFD0033749D /* String+SystemImageName.swift */; };
+		194977992B6A4E650033749D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977982B6A4E650033749D /* DummyData.swift */; };
+		1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949779A2B6A76070033749D /* LinearGradient+background.swift */; };
 		19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */; };
 		19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABB2B68A57B001E58EF /* Assets.xcassets */; };
 		19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABE2B68A57B001E58EF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		194977852B6A262A0033749D /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
+		1949777C2B6A0B050033749D /* SongSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchView.swift; sourceTree = "<group>"; };
+		1949777F2B6A13BB0033749D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		194977812B6A13EB0033749D /* TrackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRow.swift; sourceTree = "<group>"; };
+		194977832B6A1F5C0033749D /* TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackList.swift; sourceTree = "<group>"; };
 		194977872B6A266B0033749D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MusicPlayer/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
+		194977882B6A2C350033749D /* String+FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FontName.swift"; sourceTree = "<group>"; };
+		1949778C2B6A321E0033749D /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		194977922B6A46770033749D /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		194977942B6A48460033749D /* Image+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+init.swift"; sourceTree = "<group>"; };
+		194977962B6A4BFD0033749D /* String+SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SystemImageName.swift"; sourceTree = "<group>"; };
+		194977982B6A4E650033749D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		1949779A2B6A76070033749D /* LinearGradient+background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+background.swift"; sourceTree = "<group>"; };
 		19B52AB42B68A57A001E58EF /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
 		19B52ABB2B68A57B001E58EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +53,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1949777E2B6A0B0F0033749D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1949779C2B6A7C320033749D /* SongSearchView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1949778A2B6A2C3C0033749D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				194977882B6A2C350033749D /* String+FontName.swift */,
+				1949779A2B6A76070033749D /* LinearGradient+background.swift */,
+				194977962B6A4BFD0033749D /* String+SystemImageName.swift */,
+				194977942B6A48460033749D /* Image+init.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1949778B2B6A2C420033749D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1949778A2B6A2C3C0033749D /* Extension */,
+				194977982B6A4E650033749D /* DummyData.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1949779C2B6A7C320033749D /* SongSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				1949777C2B6A0B050033749D /* SongSearchView.swift */,
+				1949779D2B6A7C490033749D /* Subview */,
+			);
+			path = SongSearchView;
+			sourceTree = "<group>";
+		};
+		1949779D2B6A7C490033749D /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				194977812B6A13EB0033749D /* TrackRow.swift */,
+				1949777F2B6A13BB0033749D /* SearchBar.swift */,
+				194977832B6A1F5C0033749D /* TrackList.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		19B52AAB2B68A57A001E58EF = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				19B52AC52B68A5AB001E58EF /* Application */,
+				1949777E2B6A0B0F0033749D /* Presentation */,
+				1949778B2B6A2C420033749D /* Support */,
 				19B52AC62B68A5D1001E58EF /* Resources */,
 				19B52ABD2B68A57B001E58EF /* Preview Content */,
 			);
@@ -79,7 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				194977872B6A266B0033749D /* Info.plist */,
-				194977852B6A262A0033749D /* Montserrat.ttf */,
+				194977922B6A46770033749D /* Montserrat-Medium.ttf */,
+				1949778C2B6A321E0033749D /* Montserrat-SemiBold.ttf */,
 				19B52ABB2B68A57B001E58EF /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -143,9 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1949778D2B6A321E0033749D /* Montserrat-SemiBold.ttf in Resources */,
 				19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */,
+				194977932B6A46770033749D /* Montserrat-Medium.ttf in Resources */,
 				19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */,
-				194977862B6A262B0033749D /* Montserrat.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				194977842B6A1F5C0033749D /* TrackList.swift in Sources */,
+				194977972B6A4BFD0033749D /* String+SystemImageName.swift in Sources */,
+				1949777D2B6A0B050033749D /* SongSearchView.swift in Sources */,
 				19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */,
+				194977822B6A13EB0033749D /* TrackRow.swift in Sources */,
+				194977952B6A48460033749D /* Image+init.swift in Sources */,
+				194977892B6A2C350033749D /* String+FontName.swift in Sources */,
+				194977992B6A4E650033749D /* DummyData.swift in Sources */,
+				1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */,
+				194977802B6A13BB0033749D /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
