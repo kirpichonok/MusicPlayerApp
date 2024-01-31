@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		194977862B6A262B0033749D /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 194977852B6A262A0033749D /* Montserrat.ttf */; };
 		19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */; };
 		19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABB2B68A57B001E58EF /* Assets.xcassets */; };
 		19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABE2B68A57B001E58EF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		194977852B6A262A0033749D /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 		194977872B6A266B0033749D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MusicPlayer/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		19B52AB42B68A57A001E58EF /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				194977872B6A266B0033749D /* Info.plist */,
+				194977852B6A262A0033749D /* Montserrat.ttf */,
 				19B52ABB2B68A57B001E58EF /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -142,6 +145,7 @@
 			files = (
 				19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */,
 				19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */,
+				194977862B6A262B0033749D /* Montserrat.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
