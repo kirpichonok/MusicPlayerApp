@@ -36,6 +36,7 @@
 		194977962B6A4BFD0033749D /* String+SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SystemImageName.swift"; sourceTree = "<group>"; };
 		194977982B6A4E650033749D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		1949779A2B6A76070033749D /* LinearGradient+background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+background.swift"; sourceTree = "<group>"; };
+		194977A72B6B543C0033749D /* ImageSnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSnapCarousel.swift; sourceTree = "<group>"; };
 		19B52AB42B68A57A001E58EF /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
 		19B52ABB2B68A57B001E58EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		1949777E2B6A0B0F0033749D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				194977A22B6A7CE90033749D /* PlayerView */,
 				1949779C2B6A7C320033749D /* SongSearchView */,
 			);
 			path = Presentation;
@@ -98,6 +100,14 @@
 				194977832B6A1F5C0033749D /* TrackList.swift */,
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		194977A22B6A7CE90033749D /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				194977A72B6B543C0033749D /* ImageSnapCarousel.swift */,
+			);
+			path = PlayerView;
 			sourceTree = "<group>";
 		};
 		19B52AAB2B68A57A001E58EF = {
@@ -228,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				194977842B6A1F5C0033749D /* TrackList.swift in Sources */,
+				194977A82B6B543C0033749D /* ImageSnapCarousel.swift in Sources */,
 				194977972B6A4BFD0033749D /* String+SystemImageName.swift in Sources */,
 				1949777D2B6A0B050033749D /* SongSearchView.swift in Sources */,
 				19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */,
