@@ -26,6 +26,9 @@
 		19BF659E2B6C94ED00C82F4E /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF659D2B6C94ED00C82F4E /* DragState.swift */; };
 		19BF65A02B6CD8F000C82F4E /* URL+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF659F2B6CD8F000C82F4E /* URL+Identifiable.swift */; };
 		19BF65A32B6CDA5000C82F4E /* PlayerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF65A22B6CDA5000C82F4E /* PlayerButtonsView.swift */; };
+		19BF65A52B6CE19400C82F4E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF65A42B6CE19400C82F4E /* Coordinator.swift */; };
+		19BF65A72B6CE1AA00C82F4E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF65A62B6CE1AA00C82F4E /* Page.swift */; };
+		19BF65AB2B6CE29000C82F4E /* CoordinatorRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BF65AA2B6CE29000C82F4E /* CoordinatorRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		19BF659D2B6C94ED00C82F4E /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		19BF659F2B6CD8F000C82F4E /* URL+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Identifiable.swift"; sourceTree = "<group>"; };
 		19BF65A22B6CDA5000C82F4E /* PlayerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerButtonsView.swift; sourceTree = "<group>"; };
+		19BF65A42B6CE19400C82F4E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		19BF65A62B6CE1AA00C82F4E /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		19BF65AA2B6CE29000C82F4E /* CoordinatorRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				19B52AC52B68A5AB001E58EF /* Application */,
+				19BF65A82B6CE23000C82F4E /* Navigation */,
 				1949777E2B6A0B0F0033749D /* Presentation */,
 				1949778B2B6A2C420033749D /* Support */,
 				19B52AC62B68A5D1001E58EF /* Resources */,
@@ -161,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */,
+				19BF65AA2B6CE29000C82F4E /* CoordinatorRootView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -192,6 +200,23 @@
 				19BF659C2B6C94D900C82F4E /* ImageCarouselView */,
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		19BF65A82B6CE23000C82F4E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				19BF65A42B6CE19400C82F4E /* Coordinator.swift */,
+				19BF65A92B6CE24B00C82F4E /* Destination */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		19BF65A92B6CE24B00C82F4E /* Destination */ = {
+			isa = PBXGroup;
+			children = (
+				19BF65A62B6CE1AA00C82F4E /* Page.swift */,
+			);
+			path = Destination;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,15 +291,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BF65A52B6CE19400C82F4E /* Coordinator.swift in Sources */,
 				194977842B6A1F5C0033749D /* TrackList.swift in Sources */,
 				194977972B6A4BFD0033749D /* String+SystemImageName.swift in Sources */,
 				1949777D2B6A0B050033749D /* SongSearchView.swift in Sources */,
 				194977A12B6A7CE50033749D /* PlayerView.swift in Sources */,
+				19BF65A72B6CE1AA00C82F4E /* Page.swift in Sources */,
 				19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */,
 				194977822B6A13EB0033749D /* TrackRow.swift in Sources */,
 				19BF65A32B6CDA5000C82F4E /* PlayerButtonsView.swift in Sources */,
 				19BF659E2B6C94ED00C82F4E /* DragState.swift in Sources */,
 				194977952B6A48460033749D /* Image+init.swift in Sources */,
+				19BF65AB2B6CE29000C82F4E /* CoordinatorRootView.swift in Sources */,
 				194977892B6A2C350033749D /* String+FontName.swift in Sources */,
 				194977992B6A4E650033749D /* DummyData.swift in Sources */,
 				1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */,

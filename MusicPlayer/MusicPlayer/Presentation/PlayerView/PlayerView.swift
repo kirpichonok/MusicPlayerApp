@@ -2,51 +2,53 @@ import SwiftUI
 
 struct PlayerView: View
 {
+    // MARK: - Properties
+
+    @EnvironmentObject var coordinator: Coordinator
     var body: some View
     {
-        NavigationStack
+        ZStack
         {
-            ZStack
+            LinearGradient.background.ignoresSafeArea()
+
+            VStack
             {
-                LinearGradient.background.ignoresSafeArea()
+                ImageCarouselView(imageWidth: carouselWidth,
+                                  imageHeight: carouselHeight,
+                                  views: DummyData.imageURLs)
+                    .padding(.top, carouselTopOffset)
 
-                VStack
+                SongTitleView()
+
+                Group
                 {
-                    ImageCarouselView(imageWidth: carouselWidth,
-                                      imageHeight: carouselHeight,
-                                      views: DummyData.imageURLs)
-                        .padding(.top, carouselTopOffset)
+                    Spacer()
 
-                    SongTitleView()
+                    PlayerTrackView(sliderValue: $sliderValue)
 
-                    Group
-                    {
-                        Spacer()
+                    Spacer()
 
-                        PlayerTrackView(sliderValue: $sliderValue)
+                    PlayerButtonsView()
 
-                        Spacer()
-
-                        PlayerButtonsView()
-
-                        Spacer()
-                    }
-                    .frame(width: carouselWidth)
+                    Spacer()
                 }
+                .frame(width: carouselWidth)
             }
-            .toolbar
+        }
+        .toolbar
+        {
+            ToolbarItem(placement: .navigationBarLeading)
             {
-                ToolbarItem(placement: .navigationBarLeading)
+                Button
                 {
-                    Button
-                    {}
-                    label: {
-                        Image(systemName: .SystemImageName.chevronBackward)
-                            .padding(10)
-                            .foregroundStyle(.whiteApp)
-                            .background(.whiteApp.opacity(0.3))
-                            .clipShape(Circle())
-                    }
+                    coordinator.pop()
+                }
+                label: {
+                    Image(systemName: .SystemImageName.chevronBackward)
+                        .padding(10)
+                        .foregroundStyle(.whiteApp)
+                        .background(.whiteApp.opacity(0.3))
+                        .clipShape(Circle())
                 }
             }
         }
@@ -61,8 +63,6 @@ struct PlayerView: View
     private let carouselWidth: CGFloat = 239
     private let carouselTopOffset: CGFloat = 50
 }
-
-
 
 struct PlayerTrackView: View
 {
@@ -85,13 +85,10 @@ struct PlayerTrackView: View
     }
 }
 
-#Preview
+struct SongTitleView: View
 {
-    PlayerView()
-}
-
-struct SongTitleView: View {
-    var body: some View {
+    var body: some View
+    {
         VStack
         {
             Text("Eminem")
@@ -103,4 +100,9 @@ struct SongTitleView: View {
         }
         .padding(.top, 30)
     }
+}
+
+#Preview
+{
+    PlayerView()
 }

@@ -4,7 +4,8 @@ import SwiftUI
 struct MusicPlayerApp: App {
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            CoordinatorRootView()
+                .environmentObject(Coordinator())
         }
     }
 }
