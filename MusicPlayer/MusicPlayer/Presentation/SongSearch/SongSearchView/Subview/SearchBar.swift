@@ -57,7 +57,7 @@ struct SearchBar: View
     // MARK: - Private properties
 
     @State private var isSearchFieldHidden = true
-    
+
     private let textFieldPlaceholder = "Search"
     private let searchFieldFontSize: CGFloat = 16
     private let backgroundOpacity: CGFloat = 0.3
