@@ -17,7 +17,7 @@ struct SearchBar: View
                 TextField(textFieldPlaceholder, text: $searchText)
                     .font(.custom(.FontName.MontserratMedium, size: searchFieldFontSize))
                     .padding(10)
-                    .background(.white.opacity(backgroundOpacity))
+                    .background(.whiteApp.opacity(backgroundOpacity))
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .transition(AnyTransition.offset(x: 600, y: .zero)
                         .combined(with: .scale(scale: .zero, anchor: .trailing))
@@ -46,7 +46,7 @@ struct SearchBar: View
                 {
                     Image(systemName: .SystemImageName.magnifyingGlass)
                         .padding(10)
-                        .background(.white.opacity(backgroundOpacity))
+                        .background(.whiteApp.opacity(backgroundOpacity))
                         .clipShape(Circle())
                 }
             )

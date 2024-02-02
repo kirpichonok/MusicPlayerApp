@@ -35,7 +35,7 @@ struct TrackRow: View
                     .font(.title2)
                 Text(author)
                     .font(.custom(.FontName.MontserratMedium, size: authorFontSize))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(.semiWhiteApp)
             }
 
             Spacer()

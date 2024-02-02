@@ -6,15 +6,19 @@ struct SongSearchView: View
 
     var body: some View
     {
-        VStack
+        ZStack
         {
-            SearchBar(searchText: $searchText)
-                .padding()
-            TrackList(title: "Title", author: "Author")
+            LinearGradient.background.ignoresSafeArea()
+
+            VStack
+            {
+                SearchBar(searchText: $searchText)
+                    .padding()
+                TrackList(title: "Title", author: "Author")
+            }
+            .foregroundStyle(Color.whiteApp)
+            .toolbar(.hidden, for: .navigationBar)
         }
-        .foregroundStyle(Color.white)
-        .background(LinearGradient.background)
-        .toolbar(.hidden, for: .navigationBar)
     }
 }
 
