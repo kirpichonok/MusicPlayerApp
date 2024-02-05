@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct SearchBar: View
+struct SearchBarView: View
 {
     // MARK: - Properties
 
@@ -66,6 +66,6 @@ struct SearchBar: View
 
 #Preview
 {
-    SearchBar(searchText: .constant(""))
+    SearchBarView(searchText: .constant(""))
         .background(.blue)
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TrackList: View
+struct TrackListView: View
 {
     @EnvironmentObject var viewModel: SongSearchViewModel
     var action: ((SongSearchItemViewModel.Identifier) -> Void)?
@@ -10,7 +10,7 @@ struct TrackList: View
         {
             ForEach($viewModel.searchResultItems)
             { itemViewModel in
-                TrackRow(itemViewModel: itemViewModel.wrappedValue,
+                TrackRowView(itemViewModel: itemViewModel.wrappedValue,
                          action: action)
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
@@ -22,7 +22,7 @@ struct TrackList: View
 
 #Preview
 {
-    TrackList(    )
+    TrackListView(    )
     .background(.red)
     .environmentObject(SongSearchViewModel())
 }

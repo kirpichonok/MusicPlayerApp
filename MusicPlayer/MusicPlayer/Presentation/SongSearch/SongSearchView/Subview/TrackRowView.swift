@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TrackRow: View
+struct TrackRowView: View
 {
     let itemViewModel: SongSearchItemViewModel
     var action: ((SongSearchItemViewModel.Identifier) -> Void)?
@@ -66,7 +66,7 @@ struct TrackRow: View
 
 #Preview
 {
-    TrackRow(
+    TrackRowView(
         itemViewModel: SongSearchItemViewModel(song: Song.Dummy.songs[0])
     )
     .background(.red)

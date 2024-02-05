@@ -13,9 +13,9 @@ struct SongSearchView: View
 
             VStack
             {
-                SearchBar(searchText: $searchText)
+                SearchBarView(searchText: $searchText)
                     .padding()
-                TrackList(action:
+                TrackListView(action:
                     { id in
                         viewModel.didSelectItem(with: id)
                     })
