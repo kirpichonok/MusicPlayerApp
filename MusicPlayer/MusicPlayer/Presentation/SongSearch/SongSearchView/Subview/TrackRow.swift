@@ -3,7 +3,7 @@ import SwiftUI
 struct TrackRow: View
 {
     let itemViewModel: SongSearchItemViewModel
-    var action: (() -> Void)?
+    var action: ((SongSearchItemViewModel.Identifier) -> Void)?
 
     var body: some View
     {
@@ -47,7 +47,7 @@ struct TrackRow: View
             Spacer()
             Button
             {
-                action?()
+                action?(itemViewModel.id)
             } label:
             {
                 Image(systemName: .SystemImageName.playFill)
@@ -67,7 +67,7 @@ struct TrackRow: View
 #Preview
 {
     TrackRow(
-        itemViewModel: SongSearchItemViewModel.DummyData.itemsViewModel[0]
+        itemViewModel: SongSearchItemViewModel(song: Song.Dummy.songs[0])
     )
     .background(.red)
 }

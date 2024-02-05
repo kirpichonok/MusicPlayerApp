@@ -4,7 +4,7 @@ struct PlayerView: View
 {
     // MARK: - Properties
 
-    @EnvironmentObject var coordinator: Coordinator
+    @StateObject var viewModel: PlayerViewModel
     var body: some View
     {
         ZStack
@@ -15,16 +15,19 @@ struct PlayerView: View
             {
                 ImageCarouselView(imageWidth: carouselWidth,
                                   imageHeight: carouselHeight,
-                                  views: DummyData.imageURLs)
+                                  imagesURLs: DummyData.imageURLs)
                     .padding(.top, carouselTopOffset)
 
-                SongTitleView()
+                SongTitleView(artistName: viewModel.artistName,
+                              trackName: viewModel.trackName)
 
                 Group
                 {
                     Spacer()
 
-                    PlayerTrackView(sliderValue: $sliderValue)
+                    PlayerTrackView(sliderValue: $sliderValue,
+                                    songStartTime: viewModel.songStartTime,
+                                    songFinishTime: viewModel.songFinishTime)
 
                     Spacer()
 
@@ -41,7 +44,7 @@ struct PlayerView: View
             {
                 Button
                 {
-                    coordinator.pop()
+                    viewModel.didBackButtonPressed()
                 }
                 label: {
                     Image(systemName: .SystemImageName.chevronBackward)
@@ -67,6 +70,8 @@ struct PlayerView: View
 struct PlayerTrackView: View
 {
     @Binding var sliderValue: Double
+    var songStartTime: String
+    var songFinishTime: String
 
     var body: some View
     {
@@ -76,9 +81,9 @@ struct PlayerTrackView: View
                 .tint(.white)
             HStack
             {
-                Text("0:00")
+                Text(songStartTime)
                 Spacer()
-                Text("0:00")
+                Text(songFinishTime)
             }
             .foregroundStyle(.whiteApp.opacity(0.4))
         }
@@ -87,14 +92,16 @@ struct PlayerTrackView: View
 
 struct SongTitleView: View
 {
+    let artistName: String
+    let trackName: String
     var body: some View
     {
         VStack
         {
-            Text("Eminem")
+            Text(artistName)
                 .font(.custom(.FontName.MontserratSemiBold, size: 16))
                 .foregroundStyle(.whiteApp)
-            Text("Relaxing music")
+            Text(trackName)
                 .font(.custom(.FontName.MontserratMedium, size: 13))
                 .foregroundStyle(.semiWhiteApp)
         }
@@ -104,5 +111,5 @@ struct SongTitleView: View
 
 #Preview
 {
-    PlayerView()
+    PlayerView(viewModel: PlayerViewModel(song: Song.Dummy.songs[0]))
 }

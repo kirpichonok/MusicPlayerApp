@@ -7,14 +7,14 @@ struct ImageCarouselView: View
     var imageWidth: CGFloat
     var imageHeight: CGFloat
     var spacing: CGFloat = 24
-    var views: [URL]
+    var imagesURLs: [URL]
     var body: some View
     {
         ZStack
         {
-            ForEach(0..<views.count)
+            ForEach(0..<imagesURLs.count)
             { i in
-                AsyncImage(url: views[i])
+                AsyncImage(url: imagesURLs[i])
                 { imagePhase in
                     if case let .success(image) = imagePhase
                     {
@@ -52,7 +52,7 @@ struct ImageCarouselView: View
 
     private func relativeLoc() -> Int
     {
-        return ((views.count * 10000) + carousalLocation) % views.count
+        return ((imagesURLs.count * 10000) + carousalLocation) % imagesURLs.count
     }
 
     private func getOffset(_ i: Int) -> CGFloat
@@ -62,38 +62,38 @@ struct ImageCarouselView: View
             return dragState.translation.width
         }
         else if i == relativeLoc() + 1
-            || relativeLoc() == views.count - 1 && i == 0
+            || relativeLoc() == imagesURLs.count - 1 && i == 0
         {
             return dragState.translation.width + (imageWidth + spacing)
         }
         else if i == relativeLoc() - 1
-            || relativeLoc() == 0 && i == views.count - 1
+            || relativeLoc() == 0 && i == imagesURLs.count - 1
         {
             return dragState.translation.width - (imageWidth + spacing)
         }
         else if i == relativeLoc() + 2
-            || (relativeLoc() == views.count - 1 && i == 1)
-            || (relativeLoc() == views.count - 2 && i == 0)
+            || (relativeLoc() == imagesURLs.count - 1 && i == 1)
+            || (relativeLoc() == imagesURLs.count - 2 && i == 0)
         {
             return dragState.translation.width + (2 * (imageWidth + spacing))
         }
         else if i == relativeLoc() - 2
-            || (relativeLoc() == 1 && i == views.count - 1)
-            || (relativeLoc() == 0 && i == views.count - 2)
+            || (relativeLoc() == 1 && i == imagesURLs.count - 1)
+            || (relativeLoc() == 0 && i == imagesURLs.count - 2)
         {
             return dragState.translation.width - (2 * (imageWidth + spacing))
         }
         else if i == relativeLoc() + 3
-            || (relativeLoc() == views.count - 1 && i == 2)
-            || (relativeLoc() == views.count - 2 && i == 1)
-            || (relativeLoc() == views.count - 3 && i == 0)
+            || (relativeLoc() == imagesURLs.count - 1 && i == 2)
+            || (relativeLoc() == imagesURLs.count - 2 && i == 1)
+            || (relativeLoc() == imagesURLs.count - 3 && i == 0)
         {
             return dragState.translation.width + (3 * (imageWidth + spacing))
         }
         else if i == relativeLoc() - 3
-            || (relativeLoc() == 2 && i == views.count - 1)
-            || (relativeLoc() == 1 && i == views.count - 2)
-            || (relativeLoc() == 0 && i == views.count - 3)
+            || (relativeLoc() == 2 && i == imagesURLs.count - 1)
+            || (relativeLoc() == 1 && i == imagesURLs.count - 2)
+            || (relativeLoc() == 0 && i == imagesURLs.count - 3)
         {
             return dragState.translation.width - (3 * (imageWidth + spacing))
         }
@@ -119,10 +119,10 @@ struct ImageCarouselView: View
             || i - 1 == relativeLoc()
             || i + 2 == relativeLoc()
             || i - 2 == relativeLoc()
-            || (i + 1) - views.count == relativeLoc()
-            || (i - 1) - views.count == relativeLoc()
-            || (i + 2) - views.count == relativeLoc()
-            || (i - 2) - views.count == relativeLoc()
+            || (i + 1) - imagesURLs.count == relativeLoc()
+            || (i - 1) - imagesURLs.count == relativeLoc()
+            || (i + 2) - imagesURLs.count == relativeLoc()
+            || (i - 2) - imagesURLs.count == relativeLoc()
         {
             return 1
         }
@@ -134,17 +134,15 @@ struct ImageCarouselView: View
         if drag.predictedEndTranslation.width > dragThreshold || drag.translation.width > dragThreshold
         {
             carousalLocation -= 1
-            print(carousalLocation)
         }
         else if (drag.predictedEndTranslation.width) < (-1 * dragThreshold) || (drag.translation.width) < (-1 * dragThreshold)
         {
             carousalLocation += 1
-            print(carousalLocation)
         }
     }
 }
 
 #Preview
 {
-    ImageCarouselView(imageWidth: 240, imageHeight: 270, views: DummyData.imageURLs)
+    ImageCarouselView(imageWidth: 240, imageHeight: 270, imagesURLs: DummyData.imageURLs)
 }

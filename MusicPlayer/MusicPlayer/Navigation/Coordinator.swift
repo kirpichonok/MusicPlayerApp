@@ -4,6 +4,8 @@ final class Coordinator: ObservableObject
 {
     @Published var path = NavigationPath()
 
+    // MARK: - Methods
+
     func push(page: Page)
     {
         path.append(page)
@@ -24,9 +26,18 @@ final class Coordinator: ObservableObject
         switch page
         {
         case .songSearch:
-            SongSearchView()
-        case .player:
-            PlayerView()
+            let viewModel = SongSearchViewModel(coordinator: self)
+            SongSearchView(viewModel: viewModel)
+        case let .player(withSong: song):
+            let viewModel = makePlayerViewModel(with: song)
+            PlayerView(viewModel: viewModel)
         }
+    }
+
+    // MARK: - Private methods
+
+    private func makePlayerViewModel(with song: Song) -> PlayerViewModel
+    {
+        PlayerViewModel(song: song)
     }
 }

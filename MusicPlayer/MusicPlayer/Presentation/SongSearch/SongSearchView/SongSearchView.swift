@@ -2,9 +2,8 @@ import SwiftUI
 
 struct SongSearchView: View
 {
-    @EnvironmentObject var coordinator: Coordinator
     @State var searchText = ""
-    @StateObject var viewModel = SongSearchViewModel()
+    @StateObject var viewModel: SongSearchViewModel
 
     var body: some View
     {
@@ -16,14 +15,18 @@ struct SongSearchView: View
             {
                 SearchBar(searchText: $searchText)
                     .padding()
-                TrackList(searchListItems: viewModel.searchResultItems,
-                          action:
-                          {
-                              coordinator.push(page: .player)
-                          })
+                TrackList(action:
+                    { id in
+                        viewModel.didSelectItem(with: id)
+                    })
+                .environmentObject(viewModel)
             }
             .foregroundStyle(Color.whiteApp)
             .toolbar(.hidden, for: .navigationBar)
+        }
+        .onAppear
+        {
+            viewModel.updateItems()
         }
     }
 }

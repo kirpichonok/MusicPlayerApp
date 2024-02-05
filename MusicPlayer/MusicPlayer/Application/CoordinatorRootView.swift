@@ -10,7 +10,6 @@ struct CoordinatorRootView: View {
                     coordinator.build(page)
                 }
         }
-        .environmentObject(coordinator)
         .navigationBarBackButtonHidden()
     }
 }

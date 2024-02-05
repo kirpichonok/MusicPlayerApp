@@ -1,4 +1,4 @@
-enum Page {
+enum Page: Hashable {
     case songSearch
-    case player
+    case player(withSong: Song)
 }

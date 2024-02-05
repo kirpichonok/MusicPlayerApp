@@ -2,15 +2,16 @@ import SwiftUI
 
 struct TrackList: View
 {
-    @State var searchListItems: [SongSearchItemViewModel]
-    var action: (() -> Void)?
+    @EnvironmentObject var viewModel: SongSearchViewModel
+    var action: ((SongSearchItemViewModel.Identifier) -> Void)?
     var body: some View
     {
         List
         {
-            ForEach($searchListItems)
+            ForEach($viewModel.searchResultItems)
             { itemViewModel in
-                TrackRow(itemViewModel: itemViewModel.wrappedValue, action: action)
+                TrackRow(itemViewModel: itemViewModel.wrappedValue,
+                         action: action)
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
             }
@@ -21,10 +22,7 @@ struct TrackList: View
 
 #Preview
 {
-    TrackList(
-        searchListItems: [
-            SongSearchItemViewModel.DummyData.itemsViewModel[0],
-        ]
-    )
+    TrackList(    )
     .background(.red)
+    .environmentObject(SongSearchViewModel())
 }
