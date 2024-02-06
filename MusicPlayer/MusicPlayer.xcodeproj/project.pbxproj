@@ -32,6 +32,10 @@
 		1965D8822B7210BA001DBD02 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8812B7210BA001DBD02 /* DataTransferService.swift */; };
 		1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */; };
 		1965D88A2B7233FF001DBD02 /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */; };
+		1965D8902B724E3E001DBD02 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D88F2B724E3E001DBD02 /* CombineMoya */; };
+		1965D8922B724E3E001DBD02 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8912B724E3E001DBD02 /* Moya */; };
+		1965D8942B724E3E001DBD02 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8932B724E3E001DBD02 /* ReactiveMoya */; };
+		1965D8962B724E3E001DBD02 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8952B724E3E001DBD02 /* RxMoya */; };
 		19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */; };
 		19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABB2B68A57B001E58EF /* Assets.xcassets */; };
 		19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABE2B68A57B001E58EF /* Preview Assets.xcassets */; };
@@ -95,6 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1965D8922B724E3E001DBD02 /* Moya in Frameworks */,
+				1965D8902B724E3E001DBD02 /* CombineMoya in Frameworks */,
+				1965D8962B724E3E001DBD02 /* RxMoya in Frameworks */,
+				1965D8942B724E3E001DBD02 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +371,12 @@
 			dependencies = (
 			);
 			name = MusicPlayer;
+			packageProductDependencies = (
+				1965D88F2B724E3E001DBD02 /* CombineMoya */,
+				1965D8912B724E3E001DBD02 /* Moya */,
+				1965D8932B724E3E001DBD02 /* ReactiveMoya */,
+				1965D8952B724E3E001DBD02 /* RxMoya */,
+			);
 			productName = MusicPlayer;
 			productReference = 19B52AB42B68A57A001E58EF /* MusicPlayer.app */;
 			productType = "com.apple.product-type.application";
@@ -391,6 +405,9 @@
 				Base,
 			);
 			mainGroup = 19B52AAB2B68A57A001E58EF;
+			packageReferences = (
+				1965D88E2B724E3E001DBD02 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 19B52AB52B68A57A001E58EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -666,6 +683,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1965D88E2B724E3E001DBD02 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1965D88F2B724E3E001DBD02 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1965D88E2B724E3E001DBD02 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		1965D8912B724E3E001DBD02 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1965D88E2B724E3E001DBD02 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		1965D8932B724E3E001DBD02 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1965D88E2B724E3E001DBD02 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		1965D8952B724E3E001DBD02 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1965D88E2B724E3E001DBD02 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 19B52AAC2B68A57A001E58EF /* Project object */;
 }
