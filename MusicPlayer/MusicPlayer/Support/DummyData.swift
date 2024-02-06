@@ -8,4 +8,29 @@ enum DummyData
         URL(string: "https://is1-ssl.mzstatic.com/image/thumb/Music/43/b2/d4/mzi.hqnwtruw.jpg/100x100bb.jpg")!,
         URL(string: "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2c/b0/de/2cb0de7b-4559-d885-36f8-271c950cba34/886443562097.jpg/100x100bb.jpg")!,
     ]
+    
+    static let searchSongViewModel: SongSearchViewModel =  {
+        let songsRepo = DefaultSongsRepository(dataTransferService: DefaultDataTransferService())
+        let useCase = SongSearchUseCase(songsRepository: songsRepo)
+        let viewModel = SongSearchViewModel(songSearchUseCase: useCase)
+        viewModel.searchSong(by: "any")
+        return viewModel
+    }()
+}
+
+extension SongsResponseDTO
+{
+    init(from songs: [Song])
+    {
+        let songDTOs = songs.map
+        { SongDTO(id: $0.id,
+                  kind: .song,
+                  artistName: $0.artistName,
+                  trackName: $0.trackName,
+                  trackTime: $0.trackTime ?? 0,
+                  previewPosterPath: $0.previewPosterPath,
+                  posterPath: $0.posterPath)
+        }
+        self.init(songs: songDTOs)
+    }
 }

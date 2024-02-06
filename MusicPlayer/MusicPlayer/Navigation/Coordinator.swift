@@ -26,7 +26,9 @@ final class Coordinator: ObservableObject
         switch page
         {
         case .songSearch:
-            let viewModel = SongSearchViewModel(coordinator: self)
+            let songsRepo = DefaultSongsRepository(dataTransferService: DefaultDataTransferService())
+            let useCase = SongSearchUseCase(songsRepository: songsRepo)
+            let viewModel = SongSearchViewModel(coordinator: self, songSearchUseCase: useCase)
             SongSearchView(viewModel: viewModel)
         case let .player(withSong: song):
             let viewModel = makePlayerViewModel(with: song)

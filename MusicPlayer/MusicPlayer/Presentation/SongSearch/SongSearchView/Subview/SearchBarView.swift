@@ -1,12 +1,12 @@
-
 import SwiftUI
 
 struct SearchBarView: View
-{
+{ 
+    // TODO: add hide action when resign first responder
+    // TODO: add should return action
     // MARK: - Properties
-
     @Binding var searchText: String
-    var action: ((String) -> Void)?
+    var onSearchTapAction: ((String) -> Void)?
 
     var body: some View
     {
@@ -31,7 +31,7 @@ struct SearchBarView: View
                 {
                     if !searchText.isEmpty
                     {
-                        action?(searchText)
+                        onSearchTapAction?(searchText)
                     }
                     else
                     {

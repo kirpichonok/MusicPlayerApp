@@ -11,7 +11,7 @@ struct TrackListView: View
             ForEach($viewModel.searchResultItems)
             { itemViewModel in
                 TrackRowView(itemViewModel: itemViewModel.wrappedValue,
-                         action: action)
+                             action: action)
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
             }
@@ -22,7 +22,7 @@ struct TrackListView: View
 
 #Preview
 {
-    TrackListView(    )
-    .background(.red)
-    .environmentObject(SongSearchViewModel())
+    TrackListView()
+        .background(.red)
+        .environmentObject(DummyData.searchSongViewModel)
 }

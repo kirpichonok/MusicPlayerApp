@@ -13,7 +13,7 @@ struct SongSearchView: View
 
             VStack
             {
-                SearchBarView(searchText: $searchText)
+                SearchBarView(searchText: $searchText, onSearchTapAction: viewModel.searchSong(by:))
                     .padding()
                 TrackListView(action:
                     { id in
@@ -24,14 +24,10 @@ struct SongSearchView: View
             .foregroundStyle(Color.whiteApp)
             .toolbar(.hidden, for: .navigationBar)
         }
-        .onAppear
-        {
-            viewModel.updateItems()
-        }
     }
 }
 
 #Preview
 {
-    SongSearchView(viewModel: SongSearchViewModel())
+    SongSearchView(viewModel: DummyData.searchSongViewModel)
 }
