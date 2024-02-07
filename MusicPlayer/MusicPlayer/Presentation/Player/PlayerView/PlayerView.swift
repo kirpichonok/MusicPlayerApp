@@ -116,5 +116,5 @@ struct SongTitleView: View
 
 #Preview
 {
-    PlayerView(viewModel: PlayerViewModel(song: Song.Dummy.songs[0]))
+    PlayerView(viewModel: PlayerViewModel(song: DummyData.songs[0]))
 }

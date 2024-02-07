@@ -67,7 +67,7 @@ struct TrackRowView: View
 #Preview
 {
     TrackRowView(
-        itemViewModel: SongSearchItemViewModel(song: Song.Dummy.songs[0])
+        itemViewModel: SongSearchItemViewModel(song: DummyData.songs[0])
     )
     .background(.red)
 }

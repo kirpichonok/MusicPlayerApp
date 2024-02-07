@@ -34,11 +34,6 @@ final class SongSearchViewModel: ObservableObject
 
     // MARK: - Methods
 
-    func updateItems()
-    {
-        songs = Song.Dummy.songs
-    }
-
     func didSelectItem(with id: SongSearchItemViewModel.Identifier)
     {
         if let song = songs.first(where: { $0.id == id })
