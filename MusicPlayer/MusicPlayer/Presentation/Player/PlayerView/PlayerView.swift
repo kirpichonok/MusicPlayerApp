@@ -56,6 +56,7 @@ struct PlayerView: View
             }
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     init(viewModel: PlayerViewModel)
