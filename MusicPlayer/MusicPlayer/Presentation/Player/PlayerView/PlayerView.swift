@@ -4,7 +4,7 @@ struct PlayerView: View
 {
     // MARK: - Properties
 
-    @StateObject var viewModel: PlayerViewModel
+    @StateObject private var viewModel: PlayerViewModel
     var body: some View
     {
         ZStack
@@ -57,6 +57,11 @@ struct PlayerView: View
         }
         .navigationBarBackButtonHidden(true)
     }
+    
+    init(viewModel: PlayerViewModel)
+    {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     // MARK: - Private properties
 
@@ -98,10 +103,10 @@ struct SongTitleView: View
     {
         VStack
         {
-            Text(artistName)
+            Text(trackName)
                 .font(.custom(.FontName.MontserratSemiBold, size: 16))
                 .foregroundStyle(.whiteApp)
-            Text(trackName)
+            Text(artistName)
                 .font(.custom(.FontName.MontserratMedium, size: 13))
                 .foregroundStyle(.semiWhiteApp)
         }
