@@ -26,9 +26,7 @@ final class Coordinator: ObservableObject
         switch page
         {
         case .songSearch:
-            let songsRepo = DefaultSongsRepository(dataTransferService: DefaultDataTransferService())
-            let useCase = SongSearchUseCase(songsRepository: songsRepo)
-            let viewModel = SongSearchViewModel(coordinator: self, songSearchUseCase: useCase)
+            let viewModel = makeSongSearchViewModel()
             SongSearchView(viewModel: viewModel)
         case let .player(withSong: song):
             let viewModel = makePlayerViewModel(with: song)
@@ -40,6 +38,13 @@ final class Coordinator: ObservableObject
 
     private func makePlayerViewModel(with song: Song) -> PlayerViewModel
     {
-        PlayerViewModel(song: song)
+        PlayerViewModel(song: song, coordinator: self)
+    }
+
+    private func makeSongSearchViewModel() -> SongSearchViewModel
+    {
+        let songsRepo = DefaultSongsRepository(dataTransferService: DefaultDataTransferService())
+        let useCase = SongSearchUseCase(songsRepository: songsRepo)
+        return SongSearchViewModel(coordinator: self, songSearchUseCase: useCase)
     }
 }

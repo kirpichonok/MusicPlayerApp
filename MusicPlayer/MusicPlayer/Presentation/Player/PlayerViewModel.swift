@@ -26,8 +26,9 @@ final class PlayerViewModel: ObservableObject
         postersURLs.isEmpty
     }
 
-    init(song: Song)
+    init(song: Song, coordinator: Coordinator? = nil)
     {
+        self.coordinator = coordinator
         trackName = song.trackName ?? ""
         artistName = song.artistName ?? ""
         trackTime = song.trackTime
