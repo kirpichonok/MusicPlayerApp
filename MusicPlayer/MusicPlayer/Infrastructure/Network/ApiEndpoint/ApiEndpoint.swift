@@ -2,7 +2,7 @@ import Foundation
 
 enum ApiEndpoint {
     case song(query: SongSearchQuery)
-    case image(stringUrl: String)
+    case image(url: URL)
 }
 
 extension ApiEndpoint {

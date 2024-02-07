@@ -36,6 +36,8 @@
 		1965D8922B724E3E001DBD02 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8912B724E3E001DBD02 /* Moya */; };
 		1965D8942B724E3E001DBD02 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8932B724E3E001DBD02 /* ReactiveMoya */; };
 		1965D8962B724E3E001DBD02 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8952B724E3E001DBD02 /* RxMoya */; };
+		1965D8982B724EC9001DBD02 /* ApiEndpoint+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8972B724EC9001DBD02 /* ApiEndpoint+TargetType.swift */; };
+		1965D89B2B725D90001DBD02 /* Moya+async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D89A2B725D90001DBD02 /* Moya+async.swift */; };
 		19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */; };
 		19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABB2B68A57B001E58EF /* Assets.xcassets */; };
 		19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABE2B68A57B001E58EF /* Preview Assets.xcassets */; };
@@ -78,6 +80,8 @@
 		1965D8812B7210BA001DBD02 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTransferError+isInternetConnectionError.swift"; sourceTree = "<group>"; };
 		1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
+		1965D8972B724EC9001DBD02 /* ApiEndpoint+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiEndpoint+TargetType.swift"; sourceTree = "<group>"; };
+		1965D89A2B725D90001DBD02 /* Moya+async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+async.swift"; sourceTree = "<group>"; };
 		19B52AB42B68A57A001E58EF /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
 		19B52ABB2B68A57B001E58EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,10 +213,11 @@
 			isa = PBXGroup;
 			children = (
 				195182BE2B713774008D204C /* NetworkService.swift */,
+				1965D89A2B725D90001DBD02 /* Moya+async.swift */,
 				1965D8812B7210BA001DBD02 /* DataTransferService.swift */,
 				195182C32B713BD0008D204C /* DataTransferError.swift */,
 				1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */,
-				195182C12B7139AE008D204C /* ApiEndpoint.swift */,
+				1965D8992B724EE5001DBD02 /* ApiEndpoint */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -223,6 +228,15 @@
 				195182C02B713992008D204C /* Network */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1965D8992B724EE5001DBD02 /* ApiEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				195182C12B7139AE008D204C /* ApiEndpoint.swift */,
+				1965D8972B724EC9001DBD02 /* ApiEndpoint+TargetType.swift */,
+			);
+			path = ApiEndpoint;
 			sourceTree = "<group>";
 		};
 		19B52AAB2B68A57A001E58EF = {
@@ -463,12 +477,14 @@
 				195182AB2B70B400008D204C /* PlayerViewModel.swift in Sources */,
 				195182BD2B7136EF008D204C /* DefaultSongsRepository.swift in Sources */,
 				194977992B6A4E650033749D /* DummyData.swift in Sources */,
+				1965D8982B724EC9001DBD02 /* ApiEndpoint+TargetType.swift in Sources */,
 				1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */,
 				1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */,
 				19BF65A02B6CD8F000C82F4E /* URL+Identifiable.swift in Sources */,
 				195182BF2B713774008D204C /* NetworkService.swift in Sources */,
 				19BF659B2B6C94C000C82F4E /* ImageCarouselView.swift in Sources */,
 				194977802B6A13BB0033749D /* SearchBarView.swift in Sources */,
+				1965D89B2B725D90001DBD02 /* Moya+async.swift in Sources */,
 				195182C22B7139AE008D204C /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
