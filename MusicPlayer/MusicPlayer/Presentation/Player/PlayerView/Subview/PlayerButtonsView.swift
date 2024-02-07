@@ -30,6 +30,7 @@ struct PlayerButtonsView: View
                        height: buttonFrameHeight)
                 .foregroundStyle(.whiteApp)
         }
+        .frame(minHeight: 78)
     }
     
     // MARK: - Private Properties
