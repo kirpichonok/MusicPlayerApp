@@ -38,6 +38,8 @@
 		1965D8962B724E3E001DBD02 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1965D8952B724E3E001DBD02 /* RxMoya */; };
 		1965D8982B724EC9001DBD02 /* ApiEndpoint+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8972B724EC9001DBD02 /* ApiEndpoint+TargetType.swift */; };
 		1965D89B2B725D90001DBD02 /* Moya+async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D89A2B725D90001DBD02 /* Moya+async.swift */; };
+		1965D89D2B7375F0001DBD02 /* UIImage+scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D89C2B7375F0001DBD02 /* UIImage+scale.swift */; };
+		1965D89F2B73779B001DBD02 /* PlayerTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D89E2B73779B001DBD02 /* PlayerTrackView.swift */; };
 		19B52AB82B68A57A001E58EF /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */; };
 		19B52ABC2B68A57B001E58EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABB2B68A57B001E58EF /* Assets.xcassets */; };
 		19B52ABF2B68A57B001E58EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B52ABE2B68A57B001E58EF /* Preview Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
 		1965D8972B724EC9001DBD02 /* ApiEndpoint+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiEndpoint+TargetType.swift"; sourceTree = "<group>"; };
 		1965D89A2B725D90001DBD02 /* Moya+async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+async.swift"; sourceTree = "<group>"; };
+		1965D89C2B7375F0001DBD02 /* UIImage+scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+scale.swift"; sourceTree = "<group>"; };
+		1965D89E2B73779B001DBD02 /* PlayerTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackView.swift; sourceTree = "<group>"; };
 		19B52AB42B68A57A001E58EF /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B52AB72B68A57A001E58EF /* MusicPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerApp.swift; sourceTree = "<group>"; };
 		19B52ABB2B68A57B001E58EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				194977882B6A2C350033749D /* String+FontName.swift */,
+				1965D89C2B7375F0001DBD02 /* UIImage+scale.swift */,
 				19BF659F2B6CD8F000C82F4E /* URL+Identifiable.swift */,
 				1949779A2B6A76070033749D /* LinearGradient+background.swift */,
 				194977962B6A4BFD0033749D /* String+SystemImageName.swift */,
@@ -312,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				19BF65A22B6CDA5000C82F4E /* PlayerButtonsView.swift */,
+				1965D89E2B73779B001DBD02 /* PlayerTrackView.swift */,
 				19BF659C2B6C94D900C82F4E /* ImageCarouselView */,
 			);
 			path = Subview;
@@ -471,6 +477,7 @@
 				194977952B6A48460033749D /* Image+init.swift in Sources */,
 				195182B72B712A00008D204C /* SongSearchQuery.swift in Sources */,
 				19BFC5382B6D05FD009FFC37 /* SongSearchViewModel.swift in Sources */,
+				1965D89D2B7375F0001DBD02 /* UIImage+scale.swift in Sources */,
 				19BF65AB2B6CE29000C82F4E /* CoordinatorRootView.swift in Sources */,
 				19BFC53E2B6D0CED009FFC37 /* SongsResponseDTO.swift in Sources */,
 				194977892B6A2C350033749D /* String+FontName.swift in Sources */,
@@ -478,6 +485,7 @@
 				195182BD2B7136EF008D204C /* DefaultSongsRepository.swift in Sources */,
 				194977992B6A4E650033749D /* DummyData.swift in Sources */,
 				1965D8982B724EC9001DBD02 /* ApiEndpoint+TargetType.swift in Sources */,
+				1965D89F2B73779B001DBD02 /* PlayerTrackView.swift in Sources */,
 				1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */,
 				1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */,
 				19BF65A02B6CD8F000C82F4E /* URL+Identifiable.swift in Sources */,

@@ -72,29 +72,6 @@ struct PlayerView: View
     private let carouselTopOffset: CGFloat = 30
 }
 
-struct PlayerTrackView: View
-{
-    @Binding var sliderValue: Double
-    var songStartTime: String
-    var songFinishTime: String
-
-    var body: some View
-    {
-        VStack(spacing: 11)
-        {
-            Slider(value: $sliderValue, in: 0...10)
-                .tint(.white)
-            HStack
-            {
-                Text(songStartTime)
-                Spacer()
-                Text(songFinishTime)
-            }
-            .foregroundStyle(.whiteApp.opacity(0.4))
-        }
-    }
-}
-
 struct SongTitleView: View
 {
     let artistName: String
@@ -112,13 +89,13 @@ struct SongTitleView: View
         }
         .frame(minHeight: 80)
         .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-        
     }
 }
 
 #Preview
 {
-    NavigationStack {
+    NavigationStack
+    {
         PlayerView(viewModel: PlayerViewModel(song: DummyData.songs[0]))
     }
 }

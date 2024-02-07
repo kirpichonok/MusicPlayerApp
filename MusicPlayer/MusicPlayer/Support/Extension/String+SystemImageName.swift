@@ -8,6 +8,7 @@ extension String
         static let chevronBackward = "chevron.backward"
         static let forwardEndFill = "forward.end.fill"
         static let backwardEndFill = "backward.end.fill"
+        static let circleFill = "circle.fill"
 //        static let playCircleFill = "play.circle.fill"
     }
 }
