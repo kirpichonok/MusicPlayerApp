@@ -15,7 +15,7 @@ struct PlayerView: View
             {
                 ImageCarouselView(imageWidth: carouselWidth,
                                   imageHeight: carouselHeight,
-                                  imagesURLs: DummyData.imageURLs)
+                                  imagesURLs: viewModel.postersURLs)
                     .padding(.top, carouselTopOffset)
 
                 SongTitleView(artistName: viewModel.artistName,
@@ -57,7 +57,7 @@ struct PlayerView: View
         }
         .navigationBarBackButtonHidden(true)
     }
-    
+
     init(viewModel: PlayerViewModel)
     {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -69,7 +69,7 @@ struct PlayerView: View
     @State private var index = 0
     private let carouselHeight: CGFloat = 274
     private let carouselWidth: CGFloat = 239
-    private let carouselTopOffset: CGFloat = 50
+    private let carouselTopOffset: CGFloat = 30
 }
 
 struct PlayerTrackView: View
@@ -110,11 +110,15 @@ struct SongTitleView: View
                 .font(.custom(.FontName.MontserratMedium, size: 13))
                 .foregroundStyle(.semiWhiteApp)
         }
-        .padding(.top, 30)
+        .frame(minHeight: 80)
+        .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+        
     }
 }
 
 #Preview
 {
-    PlayerView(viewModel: PlayerViewModel(song: DummyData.songs[0]))
+    NavigationStack {
+        PlayerView(viewModel: PlayerViewModel(song: DummyData.songs[0]))
+    }
 }
