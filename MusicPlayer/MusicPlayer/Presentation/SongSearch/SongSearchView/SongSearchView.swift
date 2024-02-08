@@ -24,6 +24,10 @@ struct SongSearchView: View
             .foregroundStyle(Color.whiteApp)
             .toolbar(.hidden, for: .navigationBar)
         }
+        .onTapGesture
+        {
+            hideKeyboard()
+        }
     }
 }
 

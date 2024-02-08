@@ -29,6 +29,8 @@
 		195182C22B7139AE008D204C /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182C12B7139AE008D204C /* ApiEndpoint.swift */; };
 		195182C42B713BD0008D204C /* DataTransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182C32B713BD0008D204C /* DataTransferError.swift */; };
 		1951B04A2B74A9E500BABED8 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B0492B74A9E400BABED8 /* BackgroundView.swift */; };
+		1951B04D2B75057500BABED8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B04C2B75057500BABED8 /* SearchBar.swift */; };
+		1951B0502B7508F200BABED8 /* View+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B04F2B7508F200BABED8 /* View+hideKeyboard.swift */; };
 		1965D8822B7210BA001DBD02 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8812B7210BA001DBD02 /* DataTransferService.swift */; };
 		1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */; };
 		1965D88A2B7233FF001DBD02 /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */; };
@@ -79,6 +81,8 @@
 		195182C12B7139AE008D204C /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		195182C32B713BD0008D204C /* DataTransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferError.swift; sourceTree = "<group>"; };
 		1951B0492B74A9E400BABED8 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		1951B04C2B75057500BABED8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		1951B04F2B7508F200BABED8 /* View+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+hideKeyboard.swift"; sourceTree = "<group>"; };
 		1965D8812B7210BA001DBD02 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTransferError+isInternetConnectionError.swift"; sourceTree = "<group>"; };
 		1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				19BF659F2B6CD8F000C82F4E /* URL+Identifiable.swift */,
 				194977962B6A4BFD0033749D /* String+SystemImageName.swift */,
 				194977942B6A48460033749D /* Image+init.swift */,
+				1951B04F2B7508F200BABED8 /* View+hideKeyboard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -161,8 +166,8 @@
 		1949779D2B6A7C490033749D /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				1951B04E2B75079100BABED8 /* SearchBarView */,
 				194977812B6A13EB0033749D /* TrackRowView.swift */,
-				1949777F2B6A13BB0033749D /* SearchBarView.swift */,
 				194977832B6A1F5C0033749D /* TrackListView.swift */,
 			);
 			path = Subview;
@@ -233,6 +238,15 @@
 				1951B0492B74A9E400BABED8 /* BackgroundView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		1951B04E2B75079100BABED8 /* SearchBarView */ = {
+			isa = PBXGroup;
+			children = (
+				1949777F2B6A13BB0033749D /* SearchBarView.swift */,
+				1951B04C2B75057500BABED8 /* SearchBar.swift */,
+			);
+			path = SearchBarView;
 			sourceTree = "<group>";
 		};
 		1965D88D2B724636001DBD02 /* Infrastructure */ = {
@@ -490,6 +504,7 @@
 				19BF65AB2B6CE29000C82F4E /* CoordinatorRootView.swift in Sources */,
 				19BFC53E2B6D0CED009FFC37 /* SongsResponseDTO.swift in Sources */,
 				194977892B6A2C350033749D /* String+FontName.swift in Sources */,
+				1951B04D2B75057500BABED8 /* SearchBar.swift in Sources */,
 				195182AB2B70B400008D204C /* PlayerViewModel.swift in Sources */,
 				195182BD2B7136EF008D204C /* DefaultSongsRepository.swift in Sources */,
 				194977992B6A4E650033749D /* DummyData.swift in Sources */,
@@ -498,6 +513,7 @@
 				1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */,
 				19BF65A02B6CD8F000C82F4E /* URL+Identifiable.swift in Sources */,
 				195182BF2B713774008D204C /* NetworkService.swift in Sources */,
+				1951B0502B7508F200BABED8 /* View+hideKeyboard.swift in Sources */,
 				19BF659B2B6C94C000C82F4E /* ImageCarouselView.swift in Sources */,
 				194977802B6A13BB0033749D /* SearchBarView.swift in Sources */,
 				1965D89B2B725D90001DBD02 /* Moya+async.swift in Sources */,
