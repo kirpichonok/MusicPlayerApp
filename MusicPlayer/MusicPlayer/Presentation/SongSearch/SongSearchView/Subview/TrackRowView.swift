@@ -52,6 +52,7 @@ struct TrackRowView: View
             {
                 Image(systemName: .SystemImageName.playFill)
             }
+            .buttonStyle(.plain)
         }
     }
 
