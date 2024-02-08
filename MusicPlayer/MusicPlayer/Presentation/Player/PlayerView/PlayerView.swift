@@ -9,7 +9,7 @@ struct PlayerView: View
     {
         ZStack
         {
-            LinearGradient.background.ignoresSafeArea()
+            BackgroundView()
 
             VStack
             {

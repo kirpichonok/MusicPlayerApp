@@ -17,7 +17,6 @@
 		194977952B6A48460033749D /* Image+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977942B6A48460033749D /* Image+init.swift */; };
 		194977972B6A4BFD0033749D /* String+SystemImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977962B6A4BFD0033749D /* String+SystemImageName.swift */; };
 		194977992B6A4E650033749D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977982B6A4E650033749D /* DummyData.swift */; };
-		1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949779A2B6A76070033749D /* LinearGradient+background.swift */; };
 		194977A12B6A7CE50033749D /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194977A02B6A7CE50033749D /* PlayerView.swift */; };
 		195182AB2B70B400008D204C /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182AA2B70B400008D204C /* PlayerViewModel.swift */; };
 		195182AD2B70C546008D204C /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182AC2B70C546008D204C /* Song.swift */; };
@@ -29,6 +28,7 @@
 		195182BF2B713774008D204C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182BE2B713774008D204C /* NetworkService.swift */; };
 		195182C22B7139AE008D204C /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182C12B7139AE008D204C /* ApiEndpoint.swift */; };
 		195182C42B713BD0008D204C /* DataTransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195182C32B713BD0008D204C /* DataTransferError.swift */; };
+		1951B04A2B74A9E500BABED8 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B0492B74A9E400BABED8 /* BackgroundView.swift */; };
 		1965D8822B7210BA001DBD02 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8812B7210BA001DBD02 /* DataTransferService.swift */; };
 		1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */; };
 		1965D88A2B7233FF001DBD02 /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */; };
@@ -67,7 +67,6 @@
 		194977942B6A48460033749D /* Image+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+init.swift"; sourceTree = "<group>"; };
 		194977962B6A4BFD0033749D /* String+SystemImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SystemImageName.swift"; sourceTree = "<group>"; };
 		194977982B6A4E650033749D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
-		1949779A2B6A76070033749D /* LinearGradient+background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+background.swift"; sourceTree = "<group>"; };
 		194977A02B6A7CE50033749D /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		195182AA2B70B400008D204C /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		195182AC2B70C546008D204C /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		195182BE2B713774008D204C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		195182C12B7139AE008D204C /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		195182C32B713BD0008D204C /* DataTransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferError.swift; sourceTree = "<group>"; };
+		1951B0492B74A9E400BABED8 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1965D8812B7210BA001DBD02 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTransferError+isInternetConnectionError.swift"; sourceTree = "<group>"; };
 		1965D8892B7233FF001DBD02 /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
@@ -123,6 +123,7 @@
 				195182A92B70B3F3008D204C /* Player */,
 				19BFC53A2B6D0678009FFC37 /* SongSearch */,
 				1965D8872B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift */,
+				1951B04B2B74A9E900BABED8 /* Common */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -133,7 +134,6 @@
 				194977882B6A2C350033749D /* String+FontName.swift */,
 				1965D89C2B7375F0001DBD02 /* UIImage+scale.swift */,
 				19BF659F2B6CD8F000C82F4E /* URL+Identifiable.swift */,
-				1949779A2B6A76070033749D /* LinearGradient+background.swift */,
 				194977962B6A4BFD0033749D /* String+SystemImageName.swift */,
 				194977942B6A48460033749D /* Image+init.swift */,
 			);
@@ -225,6 +225,14 @@
 				1965D8992B724EE5001DBD02 /* ApiEndpoint */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1951B04B2B74A9E900BABED8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1951B0492B74A9E400BABED8 /* BackgroundView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		1965D88D2B724636001DBD02 /* Infrastructure */ = {
@@ -471,6 +479,7 @@
 				195182B32B712798008D204C /* SongSearchUseCase.swift in Sources */,
 				19BFC53C2B6D0849009FFC37 /* SongSearchItemViewModel.swift in Sources */,
 				195182BA2B712AAF008D204C /* PosterImagesRepository.swift in Sources */,
+				1951B04A2B74A9E500BABED8 /* BackgroundView.swift in Sources */,
 				19BF65A32B6CDA5000C82F4E /* PlayerButtonsView.swift in Sources */,
 				195182AD2B70C546008D204C /* Song.swift in Sources */,
 				19BF659E2B6C94ED00C82F4E /* DragState.swift in Sources */,
@@ -487,7 +496,6 @@
 				1965D8982B724EC9001DBD02 /* ApiEndpoint+TargetType.swift in Sources */,
 				1965D89F2B73779B001DBD02 /* PlayerTrackView.swift in Sources */,
 				1965D8882B723113001DBD02 /* DataTransferError+isInternetConnectionError.swift in Sources */,
-				1949779B2B6A76070033749D /* LinearGradient+background.swift in Sources */,
 				19BF65A02B6CD8F000C82F4E /* URL+Identifiable.swift in Sources */,
 				195182BF2B713774008D204C /* NetworkService.swift in Sources */,
 				19BF659B2B6C94C000C82F4E /* ImageCarouselView.swift in Sources */,

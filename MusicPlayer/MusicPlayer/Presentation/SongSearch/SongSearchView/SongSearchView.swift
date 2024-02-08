@@ -9,7 +9,7 @@ struct SongSearchView: View
     {
         ZStack
         {
-            LinearGradient.background.ignoresSafeArea()
+            BackgroundView()
 
             VStack
             {
