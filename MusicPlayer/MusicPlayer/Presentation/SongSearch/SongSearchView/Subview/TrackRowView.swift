@@ -43,12 +43,14 @@ struct TrackRowView: View
                                   size: artistNameFontSize))
                     .foregroundStyle(.semiWhiteApp)
             }
+            .padding(textPadding)
 
             Spacer()
             Button
             {
                 action?(itemViewModel.id)
-            } label:
+            }
+            label:
             {
                 Image(systemName: .SystemImageName.playFill)
             }
@@ -63,6 +65,7 @@ struct TrackRowView: View
     private let previewPosterFrameWidth: CGFloat = 64
     private let previewPosterFrameHeight: CGFloat = 64
     private let previewPosterFrameCornerRadius: CGFloat = 15
+    private let textPadding: CGFloat = 10
 }
 
 #Preview
